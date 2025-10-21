@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Globe, Github } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -29,8 +29,8 @@ const Contact = () => {
       href: "https://linkedin.com/in/tauqeer-ali-khan",
     },
     {
-      icon: Globe,
-      label: "Website",
+      icon: Github,
+      label: "GitHub",
       value: "tauqeer26.github.io",
       href: "https://tauqeer26.github.io/",
     },
