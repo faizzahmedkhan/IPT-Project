@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,13 +16,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
-  };
+  const navItems = [
+    { name: "about", path: "/about" },
+    { name: "services", path: "/" },
+    { name: "courses", path: "/courses" },
+    { name: "contact", path: "/contact" },
+  ];
 
   return (
     <nav
@@ -30,30 +31,29 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <button
-            onClick={() => scrollToSection("hero")}
+          <Link
+            to="/"
             className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
           >
             Tauqeer Ali Khan
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {["about", "services", "courses", "contact"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
                 className="text-foreground hover:text-primary transition-colors capitalize font-medium"
               >
-                {item}
-              </button>
+                {item.name}
+              </Link>
             ))}
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
-            >
-              Get in Touch
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
+                Get in Touch
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -68,14 +68,15 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden py-4 space-y-4 animate-in fade-in slide-in-from-top-5">
-            {["about", "services", "courses", "contact"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className="block w-full text-left text-foreground hover:text-primary transition-colors capitalize font-medium py-2"
               >
-                {item}
-              </button>
+                {item.name}
+              </Link>
             ))}
           </div>
         )}
