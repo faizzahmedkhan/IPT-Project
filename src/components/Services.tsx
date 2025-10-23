@@ -49,10 +49,8 @@ const Services = () => {
     <section id="services" className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Services
-            </span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-foreground">
+            Services
           </h2>
           <p className="text-xl text-muted-foreground">
             Comprehensive solutions for your technology and training needs
@@ -63,10 +61,10 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:shadow-glow transition-all duration-300 hover:-translate-y-2 group"
+              className="p-6 bg-card border-border hover:border-primary/30 transition-all duration-300 group"
             >
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-glow">
-                <service.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <service.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-semibold mb-3 text-foreground">{service.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
@@ -75,16 +73,16 @@ const Services = () => {
         </div>
 
         <div className="mt-16 max-w-4xl mx-auto">
-          <Card className="p-8 bg-gradient-to-br from-primary/10 to-accent/10 border-primary/20">
+          <Card className="p-8 bg-card border-border">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Looking for a custom solution?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Looking for a custom solution?</h3>
               <p className="text-muted-foreground mb-6">
                 I specialize in creating tailored solutions that address your unique challenges. 
                 Let's discuss how I can help bring your vision to life.
               </p>
               <a
                 href="#contact"
-                className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
               >
                 Contact for Pricing
               </a>

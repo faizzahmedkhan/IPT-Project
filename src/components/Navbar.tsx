@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <Link
             to="/"
-            className="text-2xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="text-2xl font-bold text-foreground hover:opacity-80 transition-opacity"
           >
             Tauqeer Ali Khan
           </Link>
@@ -50,8 +50,8 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity">
-                Get in Touch
+              <Button className="bg-primary hover:bg-primary/90 transition-colors rounded-full">
+                Contact
               </Button>
             </Link>
           </div>

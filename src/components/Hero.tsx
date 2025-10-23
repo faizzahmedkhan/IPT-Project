@@ -25,10 +25,8 @@ const Hero = () => {
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-10 duration-1000">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight">
-            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              "Leveraging AI to amplify innovation and human potential."
-            </span>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
+            "Leveraging AI to amplify innovation and human potential."
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
@@ -39,18 +37,9 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={() => scrollToSection("about")}
-              className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity text-lg px-8 py-6 group"
+              className="bg-primary hover:bg-primary/90 transition-colors text-lg px-8 py-6 rounded-full"
             >
-              Explore My Work
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection("contact")}
-              className="border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
-            >
-              Contact Me
+              Are you ready?
             </Button>
           </div>
 
