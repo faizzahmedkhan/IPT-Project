@@ -49,11 +49,6 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Link to="/contact">
-              <Button className="bg-primary hover:bg-primary/90 transition-colors rounded-full">
-                Contact
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
