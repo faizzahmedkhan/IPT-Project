@@ -33,16 +33,6 @@ const Hero = () => {
             Senior Technology Professional specializing in Machine Learning, IoT, Responsible AI, and Large Language Models.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("about")}
-              className="bg-primary hover:bg-primary/90 transition-colors text-lg px-8 py-6 rounded-full"
-            >
-              Are you ready?
-            </Button>
-          </div>
-
           <div className="pt-12">
             <p className="text-sm text-muted-foreground mb-4">Trusted by professionals worldwide</p>
             <div className="flex flex-wrap justify-center gap-8 opacity-70">
