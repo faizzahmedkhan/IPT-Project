@@ -1,9 +1,15 @@
-import { Brain, Cloud, Code2, Shield } from "lucide-react";
+import { Brain, Code2, Shield } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const KeyExpertise = () => {
   const expertiseAreas = [
+    {
+      icon: Shield,
+      title: "Responsible AI & Governance",
+      color: "from-orange-500 to-red-500",
+      skills: ["EU AI Act", "Bias Mitigation", "Ethics", "Compliance", "IoT Security"]
+    },
     {
       icon: Brain,
       title: "Artificial Intelligence",
@@ -11,22 +17,10 @@ const KeyExpertise = () => {
       skills: ["LLMs", "Deep Learning", "PyTorch", "Computer Vision", "NLP", "TensorFlow"]
     },
     {
-      icon: Cloud,
-      title: "Data & Cloud Infrastructure",
-      color: "from-blue-500 to-cyan-500",
-      skills: ["AWS", "Data Pipelines", "ETL Processes", "PostgreSQL", "Scalable Systems"]
-    },
-    {
       icon: Code2,
       title: "Software Engineering",
       color: "from-green-500 to-emerald-500",
       skills: ["Python", "Flask", "Django", "C++", "JavaScript", "Full-Stack Development"]
-    },
-    {
-      icon: Shield,
-      title: "Responsible AI & Governance",
-      color: "from-orange-500 to-red-500",
-      skills: ["EU AI Act", "Bias Mitigation", "Ethics", "Compliance", "IoT Security"]
     }
   ];
 
