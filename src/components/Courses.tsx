@@ -114,7 +114,7 @@ const Courses = () => {
                 <p className="text-sm text-muted-foreground mb-4">Available for training in:</p>
                 <p className="text-lg font-semibold mb-6">Middlesbrough, Huddersfield & Remote</p>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-primary to-accent text-primary-foreground px-8 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity"
                 >
                   Inquire About Training

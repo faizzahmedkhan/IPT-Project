@@ -81,7 +81,7 @@ const Services = () => {
                 Let's discuss how I can help bring your vision to life.
               </p>
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
               >
                 Contact for Pricing

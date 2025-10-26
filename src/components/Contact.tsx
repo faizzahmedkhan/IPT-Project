@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Linkedin, Globe, Github } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import ChatbotWidget from "./ChatbotWidget"; // Import the new component
 
 const Contact = () => {
   const contactInfo = [
@@ -45,38 +46,28 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Get in Touch
+              Get in Touch & Chat with AI
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Let's discuss how we can work together to bring your ideas to life
+            Let's discuss how we can work together to bring your ideas to life.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold mb-4">Let's Connect</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Whether you're looking for AI consulting, training programs, or custom development solutions, 
-                    I'm here to help. Feel free to reach out through any of the channels below.
-                  </p>
-                </div>
-
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-primary">Availability</p>
-                  <p className="text-muted-foreground">Remote consultations worldwide</p>
-                  <p className="text-muted-foreground">In-person meetings in Middlesbrough & Huddersfield</p>
-                </div>
-
-                <div className="space-y-1">
-                  <p className="text-sm font-semibold text-primary">Education</p>
-                  <p className="text-muted-foreground">University of Leeds</p>
-                </div>
+        {/* UPDATED GRID: Change to max-w-6xl (slightly smaller total container) and a 2-column grid */}
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
+          
+          {/* Column 1: Contact Information (Now occupies a single column on large screens) */}
+          <Card className="p-8 md:p-10 bg-card/50 backdrop-blur-sm border-border/50 shadow-card flex flex-col justify-between">
+            <div className="space-y-8">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-4">Let's Connect Directly</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  For professional inquiries, training, or project proposals, use the direct links below.
+                </p>
               </div>
 
+              {/* Contact Icons Section - Consolidating layout slightly */}
               <div className="space-y-4">
                 {contactInfo.map((item, index) => (
                   <div
@@ -107,9 +98,24 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
+              
+              {/* Additional Details Section - Consolidating info at the bottom */}
+              <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/50">
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold text-primary">Availability</p>
+                    <p className="text-muted-foreground text-sm">Remote consultations worldwide</p>
+                    <p className="text-muted-foreground text-sm">In-person (Middlesbrough & Huddersfield)</p>
+                  </div>
+                  <div className="space-y-1">
+                    <p className="text-sm font-semibold text-primary">Education</p>
+                    <p className="text-muted-foreground text-sm">University of Leeds</p>
+                  </div>
+              </div>
+
             </div>
 
-            <div className="border-t border-border pt-8">
+            {/* CTA Footer - Kept for direct contact actions */}
+            <div className="border-t border-border pt-8 mt-8">
               <div className="text-center space-y-4">
                 <p className="text-muted-foreground">
                   Ready to start your AI journey or need a custom solution?
@@ -136,6 +142,12 @@ const Contact = () => {
               </div>
             </div>
           </Card>
+          
+          {/* Column 2: Chatbot Widget (Now occupies half the width) */}
+          <div className="lg:col-span-1 min-h-[500px]">
+            <ChatbotWidget />
+          </div>
+
         </div>
       </div>
     </section>
