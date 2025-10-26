@@ -37,7 +37,7 @@ const Hero = () => {
             We guide businesses in designing ethical, compliant, and scalable AI solutions — enabling innovation without risk.
           </p>
 
-          <div className="pt-12">
+          {/* <div className="pt-12">
             <p className="text-sm text-muted-foreground mb-4">Trusted by professionals worldwide</p>
             <div className="flex flex-wrap justify-center gap-8 opacity-70">
               <span className="text-foreground/60 font-semibold">TensorFlow</span>
@@ -46,7 +46,7 @@ const Hero = () => {
               <span className="text-foreground/60 font-semibold">Python</span>
               <span className="text-foreground/60 font-semibold">PostgreSQL</span>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

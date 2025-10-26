@@ -12,7 +12,7 @@ const Footer = () => {
               Tauqeer Ali Khan
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Senior Technology Professional specializing in Machine Learning, IoT, Responsible AI, and LLMs.
+              Senior Technology Professional specializing in Responsible AI, Machine Learning and LLMs.
             </p>
           </div>
 
