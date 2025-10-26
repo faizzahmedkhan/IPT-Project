@@ -5,23 +5,23 @@ const About = () => {
   const highlights = [
     {
       icon: Brain,
-      title: "AI Specialist",
-      description: "Developed cutting-edge systems using TensorFlow, PyTorch, and NLP technologies",
+      title: "Reduce Risk",
+      description: "Minimize legal, regulatory, and reputational risks through responsible AI practices",
     },
     {
       icon: Lightbulb,
-      title: "Data Engineer",
-      description: "4+ years of experience in AI-driven data solutions and robust backend development",
+      title: "Build Trust",
+      description: "Establish customer and stakeholder confidence with transparent AI governance",
     },
     {
       icon: Users,
-      title: "Mentor & Educator",
-      description: "Empowering students as a Python and Machine Learning lecturer",
+      title: "Enable Innovation",
+      description: "Create competitive advantage through responsible and sustainable AI adoption",
     },
     {
       icon: Award,
-      title: "Professional Trainer",
-      description: "Technical training to professionals and undergraduate students",
+      title: "Ensure Compliance",
+      description: "Meet global AI standards including EU AI Act, NIST, and ISO frameworks",
     },
   ];
 
@@ -31,26 +31,24 @@ const About = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              About Me
+              Our Mission
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            A passionate advocate for innovation through AI and data
+            Bridging the gap between AI innovation and responsible governance
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto mb-16">
           <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
             <p className="text-lg leading-relaxed text-foreground/90 mb-6">
-              I'm a senior technology professional specializing in Machine Learning (ML), Internet of Things (IoT), 
-              Responsible AI, and Large Language Models (LLMs). My passion lies in creating intelligent solutions 
-              and mentoring the next generation of tech professionals.
+              Organizations across the world are integrating artificial intelligence to enhance efficiency, decision-making, and customer value. Yet the impact of AI is not only technical — it raises critical questions about trust, accountability, fairness, regulation, and organizational readiness.
             </p>
-            <p className="text-lg leading-relaxed text-foreground/90">
-              My core commitment is to leverage AI and data to solve real-world problems, drive innovation, and 
-              help individuals and businesses understand how AI can be effectively incorporated into their operations. 
-              Since writing my first Arduino C++ code in 2017, I've been on an incredible journey through the world 
-              of data and AI.
+            <p className="text-lg leading-relaxed text-foreground/90 mb-6">
+              We provide leadership teams with the clarity, frameworks, and strategies needed to deploy AI responsibly and confidently. Our mission is to ensure that the benefits of AI are realized while protecting people, organizations, and society.
+            </p>
+            <p className="text-lg leading-relaxed text-foreground/90 font-semibold">
+              We bridge the gap between AI innovation and responsible governance.
             </p>
           </Card>
         </div>
@@ -71,22 +69,45 @@ const About = () => {
         </div>
 
         <div className="mt-16 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-8 text-center">Technical Expertise</h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { category: "Languages", skills: "Python, JavaScript, C++" },
-              { category: "AI/ML Frameworks", skills: "TensorFlow, Keras, PyTorch" },
-              { category: "Backend & APIs", skills: "Flask, Django, REST APIs" },
-              { category: "Database", skills: "PostgreSQL" },
-              { category: "Cloud", skills: "AWS Infrastructure" },
-              { category: "Specializations", skills: "Computer Vision, Deep Learning, NLP" },
-            ].map((item, index) => (
-              <Card key={index} className="p-6 bg-muted/30 border-border/50">
-                <h4 className="font-semibold text-primary mb-2">{item.category}</h4>
-                <p className="text-sm text-muted-foreground">{item.skills}</p>
-              </Card>
-            ))}
-          </div>
+          <h3 className="text-2xl font-bold mb-8 text-center">Who We Work With</h3>
+          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50">
+            <p className="text-lg text-foreground/90 mb-6">
+              We support organizations that are developing AI solutions, integrating AI into internal operations, scaling data-driven decision systems, or preparing for regulatory oversight.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <div>
+                <h4 className="font-semibold text-primary mb-3">Industries We Serve</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Healthcare organizations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Financial and professional services</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Technology companies and startups</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Government and public institutions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Education and research organizations</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-primary mb-3">Our Approach</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our consulting is practical. We focus on delivering outcomes that support your business strategy. Responsible AI is not just the right thing to do — it is a business performance strategy.
+                </p>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>

@@ -26,11 +26,15 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20 pt-20">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-10 duration-1000">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-            "Leveraging AI to amplify innovation and human potential."
+            Ethics & AI Governance Consulting
           </h1>
           
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
-            Senior Technology Professional specializing in Machine Learning, IoT, Responsible AI, and Large Language Models.
+            Helping organizations adopt AI responsibly, strategically, and with measurable business impact.
+          </p>
+          
+          <p className="text-lg text-muted-foreground/90 max-w-3xl mx-auto mt-4">
+            We guide businesses in designing ethical, compliant, and scalable AI solutions — enabling innovation without risk.
           </p>
 
           <div className="pt-12">

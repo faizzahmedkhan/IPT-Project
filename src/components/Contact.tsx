@@ -46,11 +46,14 @@ const Contact = () => {
         <div className="max-w-3xl mx-auto text-center mb-16 space-y-4">
           <h2 className="text-4xl sm:text-5xl font-bold">
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Get in Touch & Chat with AI
+              Ready to Adopt AI Responsibly?
             </span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Let's discuss how we can work together to bring your ideas to life.
+            We offer consultation sessions for organizations developing or scaling AI systems. Let's discuss how we can help you innovate responsibly.
+          </p>
+          <p className="text-lg text-muted-foreground/80 mt-4">
+            We also provide and create training programs for teams looking to understand and implement responsible AI practices.
           </p>
         </div>
 

@@ -4,44 +4,29 @@ import { Card } from "@/components/ui/card";
 const Services = () => {
   const services = [
     {
-      icon: Code,
-      title: "Web Development",
-      description: "Building robust, scalable web applications using modern technologies and best practices",
-    },
-    {
-      icon: Palette,
-      title: "Web Design",
-      description: "Creating beautiful, user-friendly interfaces that deliver exceptional user experiences",
-    },
-    {
       icon: Cog,
-      title: "Custom Software Development",
-      description: "Tailored software solutions designed to meet your specific business needs",
-    },
-    {
-      icon: BarChart,
-      title: "Business Analytics",
-      description: "Data-driven insights to help you make informed business decisions",
-    },
-    {
-      icon: GraduationCap,
-      title: "Corporate Training",
-      description: "Professional technical training programs for teams and organizations",
-    },
-    {
-      icon: Briefcase,
-      title: "IT Consulting",
-      description: "Strategic technology consulting to help your business thrive in the digital age",
-    },
-    {
-      icon: HeadphonesIcon,
-      title: "Career Development Coaching",
-      description: "Personalized guidance to help professionals advance their tech careers",
+      title: "AI Governance Frameworks",
+      description: "Design governance structures that define how AI is evaluated, approved, monitored, and responsibly scaled across your organization",
     },
     {
       icon: FileText,
-      title: "SaaS Development",
-      description: "End-to-end SaaS product development from concept to deployment",
+      title: "Responsible AI Policy Development",
+      description: "Create clear, practical internal policies addressing data privacy, fairness, transparency, bias mitigation, accountability, and ethical model deployment",
+    },
+    {
+      icon: BarChart,
+      title: "AI Risk Assessment & Compliance",
+      description: "Evaluate AI systems using global standards including EU AI Act, NIST AI Risk Management Framework, and ISO/IEC AI 23894",
+    },
+    {
+      icon: Code,
+      title: "AI Strategy & Implementation Roadmaps",
+      description: "Translate ethical AI principles into business processes, workflows, and operational plans aligned to your strategic goals",
+    },
+    {
+      icon: GraduationCap,
+      title: "Leadership Advisory & Capability Training",
+      description: "Upskill executives and teams to understand risks, implement safe AI practices, and make informed governance decisions",
     },
   ];
 
@@ -57,7 +42,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -72,19 +57,37 @@ const Services = () => {
           ))}
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
+        <div className="mt-16 max-w-5xl mx-auto">
           <Card className="p-8 bg-card border-border">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Looking for a custom solution?</h3>
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Business Outcomes & Value</h3>
               <p className="text-muted-foreground mb-6">
-                I specialize in creating tailored solutions that address your unique challenges. 
-                Let's discuss how I can help bring your vision to life.
+                Our consulting is practical. We focus on delivering outcomes that support your business strategy.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {[
+                "Reduce legal, regulatory, and reputational risk",
+                "Build customer and stakeholder trust",
+                "Improve reliability and transparency of AI decisions",
+                "Enable secure and sustainable AI adoption across teams",
+                "Create competitive advantage through responsible innovation",
+              ].map((outcome, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
+                  <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-sm text-foreground/90">{outcome}</p>
+                </div>
+              ))}
+            </div>
+            <div className="text-center pt-6 border-t border-border">
+              <p className="text-lg font-semibold text-primary mb-4">
+                Responsible AI is not just the right thing to do — it is a business performance strategy.
               </p>
               <a
                 href="/contact"
                 className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full font-medium hover:bg-primary/90 transition-colors"
               >
-                Contact for Pricing
+                Get Started Today
               </a>
             </div>
           </Card>
