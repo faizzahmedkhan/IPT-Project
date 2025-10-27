@@ -66,7 +66,7 @@ const Footer = () => {
             © {currentYear} Tauqeer Ali Khan. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
-            Middlesbrough, UK | Available Remote & In-Person
+            Leeds, UK | Available Remote & In-Person
           </p>
         </div>
       </div>
