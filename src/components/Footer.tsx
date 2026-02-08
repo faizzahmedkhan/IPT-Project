@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
-              Tauqeer Ali Khan
+              Faiz Ahmed Khan
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
               Senior Technology Professional specializing in Responsible AI, Machine Learning and LLMs.
@@ -63,7 +63,7 @@ const Footer = () => {
 
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Tauqeer Ali Khan. All rights reserved.
+            © {currentYear} Faiz Ahmed Khan. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Leeds, UK | Available Remote & In-Person

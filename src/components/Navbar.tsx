@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -35,7 +35,7 @@ const Navbar = () => {
             to="/"
             className="text-2xl font-bold text-foreground hover:opacity-80 transition-opacity"
           >
-            Tauqeer Ali Khan
+            Faiz Ahmed Khan
           </Link>
 
           {/* Desktop Navigation */}
@@ -49,6 +49,13 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <Link
+              to="/admin"
+              className="flex items-center gap-2 px-3 py-1.5 bg-primary/10 hover:bg-primary/20 rounded-lg text-primary transition-colors font-medium text-sm"
+            >
+              <Database className="w-4 h-4" />
+              Admin
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,6 +80,14 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <Link
+              to="/admin"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center gap-2 text-primary font-medium py-2"
+            >
+              <Database className="w-4 h-4" />
+              Admin Dashboard
+            </Link>
           </div>
         )}
       </div>

@@ -1,8 +1,34 @@
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Linkedin, Github, Send, Loader2, CheckCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useContactForm } from "@/hooks/useContactForm";
 
 const Contact = () => {
+  const { submitForm, loading, error, success, reset } = useContactForm();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    if (error) reset();
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const submitted = await submitForm(formData);
+    if (submitted) {
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
@@ -56,7 +82,120 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          {/* Contact Form */}
+          <Card className="p-8 md:p-10 bg-card/50 backdrop-blur-sm border-border/50 shadow-card">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-2xl font-bold mb-2">Send a Message</h3>
+                <p className="text-muted-foreground text-sm">
+                  Fill out the form below and I'll get back to you as soon as possible.
+                </p>
+              </div>
+
+              {success ? (
+                <div className="flex flex-col items-center justify-center py-8 space-y-4">
+                  <CheckCircle className="w-16 h-16 text-green-500" />
+                  <h4 className="text-xl font-semibold text-green-600">Message Sent!</h4>
+                  <p className="text-muted-foreground text-center">
+                    Thank you for reaching out. I'll respond to your inquiry soon.
+                  </p>
+                  <Button variant="outline" onClick={reset}>
+                    Send Another Message
+                  </Button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium">
+                        Name *
+                      </label>
+                      <Input
+                        id="name"
+                        name="name"
+                        placeholder="Your name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        disabled={loading}
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium">
+                        Email *
+                      </label>
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        disabled={loading}
+                      />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="subject" className="text-sm font-medium">
+                      Subject *
+                    </label>
+                    <Input
+                      id="subject"
+                      name="subject"
+                      placeholder="What is this about?"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      required
+                      disabled={loading}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="message" className="text-sm font-medium">
+                      Message *
+                    </label>
+                    <Textarea
+                      id="message"
+                      name="message"
+                      placeholder="Your message..."
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      disabled={loading}
+                    />
+                  </div>
+
+                  {error && (
+                    <div className="p-3 bg-red-500/10 border border-red-500/20 rounded-lg">
+                      <p className="text-red-500 text-sm">{error}</p>
+                    </div>
+                  )}
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
+                    disabled={loading}
+                  >
+                    {loading ? (
+                      <>
+                        <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="mr-2 w-4 h-4" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
+              )}
+            </div>
+          </Card>
+
+          {/* Contact Info */}
           <Card className="p-8 md:p-10 bg-card/50 backdrop-blur-sm border-border/50 shadow-card flex flex-col justify-between">
             <div className="space-y-8">
               <div className="text-center md:text-left">

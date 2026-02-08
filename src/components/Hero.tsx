@@ -18,7 +18,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 pointer-events-none z-10" />
         <img
           src={heroImage}
-          alt="Tauqeer Ali Khan"
+          alt="Faiz Ahmed Khan"
           className="w-full h-full object-cover opacity-30"
         />
       </div>

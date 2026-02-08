@@ -9,6 +9,8 @@ import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/Services";
+import Admin from "./pages/Admin";
+import ApiStatusBanner from "./components/ApiStatusBanner";
 
 const queryClient = new QueryClient();
 
@@ -24,9 +26,11 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <ApiStatusBanner />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
