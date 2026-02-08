@@ -1,7 +1,7 @@
 // API Configuration
 // In production, this should point to your deployed backend URL
 const API_BASE_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD ? 'https://your-backend.vercel.app/api' : 'http://localhost:5001/api');
+  (import.meta.env.PROD ? 'https://ipt-backend.vercel.app/api' : 'http://localhost:5001/api');
 
 // Generic fetch wrapper with error handling
 async function fetchApi<T>(endpoint: string, options?: RequestInit): Promise<T> {
