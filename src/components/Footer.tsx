@@ -36,7 +36,7 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Connect</h4>
             <div className="flex gap-4">
               <a
-                href="https://linkedin.com/in/tauqeer-ali-khan"
+                href="https://linkedin.com/in/faizzahmedkhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -44,13 +44,13 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:khantauqeerali26@gmail.com"
+                href="mailto:akfaiz45@gmail.com"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
               >
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="https://tauqeer26.github.io/"
+                href="https://github.com/faizzahmedkhan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"

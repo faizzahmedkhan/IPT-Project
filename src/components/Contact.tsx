@@ -33,8 +33,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "khantauqeerali26@gmail.com",
-      href: "mailto:khantauqeerali26@gmail.com",
+      value: "akfaiz45@gmail.com",
+      href: "mailto:akfaiz45@gmail.com",
     },
     {
       icon: Phone,
@@ -51,14 +51,14 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/tauqeer-ali-khan",
-      href: "https://linkedin.com/in/tauqeer-ali-khan",
+      value: "linkedin.com/in/faizzahmedkhan",
+      href: "https://linkedin.com/in/faizzahmedkhan",
     },
     {
       icon: Github,
       label: "GitHub",
-      value: "tauqeer26.github.io",
-      href: "https://tauqeer26.github.io/",
+      value: "github.com/faizzahmedkhan",
+      href: "https://github.com/faizzahmedkhan",
     },
   ];
 
@@ -262,7 +262,7 @@ const Contact = () => {
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-primary to-accent hover:opacity-90 transition-opacity"
-                    onClick={() => window.location.href = 'mailto:khantauqeerali26@gmail.com'}
+                    onClick={() => window.location.href = 'mailto:akfaiz45@gmail.com'}
                   >
                     <Mail className="mr-2 w-5 h-5" />
                     Send an Email
@@ -271,7 +271,7 @@ const Contact = () => {
                     size="lg"
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary/10"
-                    onClick={() => window.open('https://linkedin.com/in/tauqeer-ali-khan', '_blank')}
+                    onClick={() => window.open('https://linkedin.com/in/faizzahmedkhan', '_blank')}
                   >
                     <Linkedin className="mr-2 w-5 h-5" />
                     Connect on LinkedIn
