@@ -1,7 +1,6 @@
-import { Mail, Phone, MapPin, Linkedin, Globe, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import ChatbotWidget from "./ChatbotWidget"; // Import the new component
 
 const Contact = () => {
   const contactInfo = [
@@ -57,10 +56,7 @@ const Contact = () => {
           </p>
         </div>
 
-        {/* UPDATED GRID: Change to max-w-6xl (slightly smaller total container) and a 2-column grid */}
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8">
-          
-          {/* Column 1: Contact Information (Now occupies a single column on large screens) */}
+        <div className="max-w-3xl mx-auto">
           <Card className="p-8 md:p-10 bg-card/50 backdrop-blur-sm border-border/50 shadow-card flex flex-col justify-between">
             <div className="space-y-8">
               <div className="text-center md:text-left">
@@ -145,12 +141,6 @@ const Contact = () => {
               </div>
             </div>
           </Card>
-          
-          {/* Column 2: Chatbot Widget (Now occupies half the width) */}
-          <div className="lg:col-span-1 min-h-[500px]">
-            <ChatbotWidget />
-          </div>
-
         </div>
       </div>
     </section>
